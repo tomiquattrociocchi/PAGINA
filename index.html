@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tomás Quattrociocchi | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Roboto Mono', monospace;
+      background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+      color: #f8f8f8;
+      cursor: url('https://cdn.iconscout.com/icon/free/png-256/pixel-cursor-7-458413.png'), auto;
+    }
+    header {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 3rem 2rem;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      color: #00ffff;
+      font-family: 'Press Start 2P', cursive;
+      animation: pixelBlink 1.5s infinite;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+    nav {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s, transform 0.2s;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 0.8rem;
+      text-shadow: 0 0 0 #00ffff;
+    }
+    nav a:hover {
+      filter: contrast(200%) brightness(150%);
+      text-shadow:
+        1px 1px 0 #00ffff,
+        -1px -1px 0 #00ffff,
+        1px -1px 0 #00ffff,
+        -1px 1px 0 #00ffff;
+      transform: scale(1.1);
+      color: #ffcc00;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      border-bottom: 2px solid #00ffff;
+      padding-bottom: 0.5rem;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      font-family: 'Press Start 2P', cursive;
+      animation: pixelBlink 1.5s infinite;
+    }
+    .project {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-left: 4px solid #00ffff;
+      border-radius: 8px;
+    }
+    .project h3 {
+      margin-top: 0;
+      color: #ffcc00;
+      font-family: 'Press Start 2P', cursive;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+    .contact a {
+      color: #00ffff;
+      text-decoration: none;
+      font-family: 'Press Start 2P', cursive;
+    }
+    .contact a:hover {
+      color: #ffcc00;
+    }
+    footer {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+      margin-top: 4rem;
+      font-family: 'Roboto Mono', monospace;
+    }
+
+    @keyframes pixelBlink {
+      0%, 100% { text-shadow: 0 0 0 #ffcc00; }
+      50% { text-shadow: 2px 0 0 #ffcc00, -2px 0 0 #ffcc00; }
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tomás Quattrociocchi</h1>
+    <p>Técnico Electrónico | Estudiante de Ingeniería Electrónica</p>
+    <nav>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#formacion">Formación</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section id="sobre-mi" style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;">
+    <img src="perfil.jpg" alt="Foto de Tomás Quattrociocchi" style="width:150px; height:150px; border-radius: 50%; object-fit: cover; border: 2px solid #00ffff;" />
+    <div>
+      <h2>Sobre mí</h2>
+      <p>Soy técnico electrónico y estudiante de Ingeniería Electrónica en la UTN San Francisco. Apasionado por el diseño de hardware, la automatización y el desarrollo de soluciones prácticas. Me especializo en proyectos con microcontroladores, diseño de PCBs y sistemas embebidos.</p>
+    </div>
+  </section>
+
+  <section id="proyectos">
+    <h2>Proyectos</h2>
+
+    <div class="project">
+      <h3>🤖 Robot Seguidor de Línea</h3>
+      <p>Desarrollo completo de un robot autónomo seguidor de línea para competencias de robótica. Incluye diseño de PCB, control PID y sensores reflectivos.</p>
+      <p><strong>Tecnologías:</strong> C, sensores IR, motores DC, microcontrolador</p>
+    </div>
+
+    <div class="project">
+      <h3>🚦 Semáforos Ferroviarios</h3>
+      <p>Desarrollo de hardware para señalización ferroviaria. Incluye control de luces LED de alta potencia, redundancia de seguridad y trabajo con normas ferroviarias.</p>
+      <p><strong>Tecnologías:</strong> Diseño de PCB, microcontroladores, protecciones eléctricas</p>
+    </div>
+
+    <div class="project">
+      <h3>⌨️ Teclado Personalizable para PC</h3>
+      <p>Diseño y construcción de un teclado custom con layout y funciones programables, interfaz USB y firmware en C.</p>
+      <p><strong>Tecnologías:</strong> Firmware HID, diseño de PCB, programación en C</p>
+    </div>
+  </section>
+
+  <section id="habilidades wachin">
+    <h2>Habilidades</h2>
+    <ul>
+      <li>Diseño de PCBs</li>
+      <li>Programación en C/C++</li>
+      <li>Microcontroladores (STM32, Arduino)</li>
+      <li>Electrónica digital y analógica</li>
+      <li>Prototipado rápido</li>
+    </ul>
+  </section>
+
+  <section id="formacion">
+    <h2>Formación</h2>
+    <ul>
+      <li>Técnico Electrónico</li>
+      <li>Estudiante de Ingeniería Electrónica – UTN San Francisco</li>
+    </ul>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p class="contact">📧 <a href="mailto:tomiquattrociocchi@gmail.com">tomiquattrociocchi@gmail.com</a></p>
+    <p class="contact">🔗 <a href="https://www.linkedin.com/in/tom%C3%A1s-quattrociocchi-514b7521b/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Tomás Quattrociocchi. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
